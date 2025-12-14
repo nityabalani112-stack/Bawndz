@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Directory - BAWNDZ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="logo.png" alt="BAWNDZ" class="brand-logo">
+            </div>
+            <nav class="side-nav">
+                <a href="dashboard.html" class="nav-item"><i class="fa-solid fa-gauge"></i><span>Overview</span></a>
+                <a href="upload.html" class="nav-item"><i class="fa-solid fa-file-arrow-up"></i><span>Upload Alumni Data</span></a>
+                <a href="memories.html" class="nav-item"><i class="fa-solid fa-images"></i><span>Memories</span></a>
+                <a href="mentorship.html" class="nav-item"><i class="fa-solid fa-user-tie"></i><span>Mentorship Sessions</span></a>
+                <a href="directory.html" class="nav-item active"><i class="fa-solid fa-address-book"></i><span>Alumni Directory</span></a>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <h1 class="page-title">Alumni Directory</h1>
+                <div class="search large">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="dirSearch" placeholder="Search by name, batch, profession">
+                </div>
+            </header>
+
+            <section class="section">
+                <div class="table">
+                    <div class="table-head">
+                        <span>Name</span>
+                        <span>Batch</span>
+                        <span>Email</span>
+                        <span>Phone</span>
+                        <span>Profession</span>
+                    </div>
+                    <div class="table-body" id="dirBody">
+                        <div class="table-row">
+                            <span>Rahul Mehta</span>
+                            <span>2016</span>
+                            <span>rahul.mehta@example.com</span>
+                            <span>+91 98765 12345</span>
+                            <span>Senior Developer, Infosys</span>
+                        </div>
+                        <div class="table-row">
+                            <span>Priya Kapoor</span>
+                            <span>2018</span>
+                            <span>priya.kapoor@example.com</span>
+                            <span>+91 99876 54321</span>
+                            <span>Product Manager, Flipkart</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const dirSearch = document.getElementById('dirSearch');
+        if (dirSearch) {
+            dirSearch.addEventListener('input', () => {
+                const q = dirSearch.value.toLowerCase();
+                document.querySelectorAll('#dirBody .table-row').forEach(row => {
+                    row.style.display = row.textContent.toLowerCase().includes(q) ? '' : 'none';
+                });
+            });
+        }
+    </script>
+</body>
+</html>
+
+

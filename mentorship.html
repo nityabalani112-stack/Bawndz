@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentorship Sessions - BAWNDZ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="logo.png" alt="BAWNDZ" class="brand-logo">
+            </div>
+            <nav class="side-nav">
+                <a href="dashboard.html" class="nav-item"><i class="fa-solid fa-gauge"></i><span>Overview</span></a>
+                <a href="upload.html" class="nav-item"><i class="fa-solid fa-file-arrow-up"></i><span>Upload Alumni Data</span></a>
+                <a href="memories.html" class="nav-item"><i class="fa-solid fa-images"></i><span>Memories</span></a>
+                <a href="mentorship.html" class="nav-item active"><i class="fa-solid fa-user-tie"></i><span>Mentorship Sessions</span></a>
+                <a href="directory.html" class="nav-item"><i class="fa-solid fa-address-book"></i><span>Alumni Directory</span></a>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <h1 class="page-title">Mentorship Sessions</h1>
+                <button class="btn primary"><i class="fa-solid fa-plus"></i><span>Create Session</span></button>
+            </header>
+
+            <section class="section">
+                <div class="card">
+                    <form class="form grid two">
+                        <div class="field"><label>Topic</label><input type="text" placeholder="Resume Building"></div>
+                        <div class="field"><label>Mentor</label><input type="text" placeholder="Dr. A. Sharma"></div>
+                        <div class="field"><label>Date</label><input type="date"></div>
+                        <div class="field"><label>Time</label><input type="time"></div>
+                        <div class="field span-2"><label>Description</label><textarea rows="3" placeholder="Brief about the session"></textarea></div>
+                        <div class="actions-row span-2">
+                            <button type="button" class="btn outline">Cancel</button>
+                            <button type="submit" class="btn primary">Save Session</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="list">
+                    <div class="list-item">
+                        <div class="list-main">
+                            <h4>Interview Prep Basics</h4>
+                            <span class="meta"><i class="fa-solid fa-calendar"></i> 20 Sep, 4:00 PM</span>
+                            <span class="meta"><i class="fa-solid fa-user-tie"></i> Ananya Verma</span>
+                        </div>
+                        <div class="list-actions">
+                            <button class="btn small outline">Edit</button>
+                            <button class="btn small">Share</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+

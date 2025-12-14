@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memories - BAWNDZ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="logo.png" alt="BAWNDZ" class="brand-logo">
+            </div>
+            <nav class="side-nav">
+                <a href="dashboard.html" class="nav-item"><i class="fa-solid fa-gauge"></i><span>Overview</span></a>
+                <a href="upload.html" class="nav-item"><i class="fa-solid fa-file-arrow-up"></i><span>Upload Alumni Data</span></a>
+                <a href="memories.html" class="nav-item active"><i class="fa-solid fa-images"></i><span>Memories</span></a>
+                <a href="mentorship.html" class="nav-item"><i class="fa-solid fa-user-tie"></i><span>Mentorship Sessions</span></a>
+                <a href="directory.html" class="nav-item"><i class="fa-solid fa-address-book"></i><span>Alumni Directory</span></a>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <h1 class="page-title">Memories</h1>
+                <div class="topbar-actions">
+                    <label class="btn" for="memoryUpload"><i class="fa-solid fa-upload"></i><span>Upload</span></label>
+                    <input id="memoryUpload" type="file" accept="image/*,video/*" hidden>
+                </div>
+            </header>
+
+            <section class="section">
+                <div class="masonry">
+                    <div class="memory-card">
+                        <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=800&q=80" alt="Alumni Event">
+                        <div class="memory-meta">
+                            <h4>Alumni Meet 2024</h4>
+                            <p>Celebrating success and connections.</p>
+                        </div>
+                    </div>
+                    <div class="memory-card">
+                        <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80" alt="Workshop">
+                        <div class="memory-meta">
+                            <h4>Leadership Workshop</h4>
+                            <p>Mentors guiding the next generation.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
+

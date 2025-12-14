@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAWNDZ - Professional Alumni Network Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+       .feature-highlight {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: auto auto;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.feature-highlight span:nth-child(3) {
+    grid-column: 1 / span 2;
+    justify-self: center;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo.png" alt="BAWNDZ" class="logo-img">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-dropdown">
+                    <a href="#institutions" class="nav-link">For Institutions <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#features">Alumni Management</a>
+                        <a href="#pricing">Career Services</a>
+                        <a href="#demo">Event Management</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#corporates" class="nav-link">For Corporates <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#recruitment">Talent Acquisition</a>
+                        <a href="#partnerships">Corporate Partnerships</a>
+                        <a href="#networking">Professional Networking</a>
+                    </div>
+                </li>
+                <li><a href="#alumni" class="nav-link">For Alumni</a></li>
+               
+                <li><a href="login.html" style="text-decoration: none;" class="btn-request-demo">Get Started</a></li>
+            </ul>
+            <div class="menu-icon">
+                <img src="menu2.png" alt="Menu" class="menu-image">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-orbits" aria-hidden="true">
+                    <div class="orbit orbit-1">
+                        <span class="node"></span>
+                        <span class="node node-2"></span>
+                        <span class="node node-3"></span>
+                    </div>
+                    <div class="orbit orbit-2">
+                        <span class="node"></span>
+                        <span class="node node-2"></span>
+                        <span class="node node-3"></span>
+                    </div>
+                    <div class="orbit orbit-3">
+                        <span class="node"></span>
+                        <span class="node node-2"></span>
+                        <span class="node node-3"></span>
+                    </div>
+                </div>
+                <div class="hero-badges" aria-hidden="true">
+                    <div class="badge badge-mentors"><i class="fas fa-handshake"></i><span>Mentorships</span></div>
+                    <div class="badge badge-jobs"><i class="fas fa-briefcase"></i><span>Jobs</span></div>
+                    <div class="badge badge-community"><i class="fas fa-users"></i><span>Community</span></div>
+                </div>
+                <!--<div class="hero-badge">
+                    <span class="badge-icon">🚀</span>
+                    <span class="badge-text">Professional Alumni Platform</span>
+                </div>-->
+                <h1 class="hero-title">
+                    <span class="title-line">Transform Your</span>
+                    <span class="title-line title-emphasis">Alumni Network</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Discover new ways to stay connected, share expertise, and unlock the full potential of your alumni community.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">
+                        <span class="btn-text">For Educational Institutions</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                    <button class="btn btn-secondary">
+                        <span class="btn-text">For Corporate Partners</span>
+                        <span class="btn-icon">→</span>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose BAWNDZ?</h2>
+            <p class="section-subtitle">Discover the powerful features that make us the leading choice for alumni network management and professional development</p>
+            <div class="features-grid">
+                <div class="feature-card" style="height: 480px;">
+                    <div class="feature-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Smart Alumni Networking</h3>
+                    <p>BAWNDZ connects colleges with their alumni, fostering mentorship, career growth, and collaboration through seamless, tech-driven engagement and meaningful lifelong relationships.</p>
+                    <div class="feature-highlight">
+                        <span class="highlight-text">Intelligent Matching</span>
+                        <span class="highlight-text">Career Opportunities</span>
+                        <span class="highlight-text">Mentorship Programs</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Track and improve alumni engagement, career growth, and network connections with real-time dashboards and reporting tools. Get actionable insights to make informed decisions and strengthen your professional relationships.</p>
+                    <div class="feature-highlight">
+                        <span class="highlight-text">Engagement Metrics</span>
+                        <span class="highlight-text">Career Tracking</span>
+                        <span class="highlight-text">Growth Analytics</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Event Management</h3>
+                    <p>Plan and manage alumni reunions, workshops, and networking events with ease. Automated invitations, RSVP tracking, and scheduling tools help you organize successful events and foster stronger connections.</p>
+                    <div class="feature-highlight">
+                        <span class="highlight-text">Event Planning</span>
+                        <span class="highlight-text">RSVP Management</span>
+                        <span class="highlight-text">Networking Events</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Connect & Chat with Alumni</h3>
+                    <p>Engage with fellow alumni anytime, anywhere. Share experiences, exchange advice, and build lasting professional relationships through direct messaging and group chats.</p>
+                    <div class="feature-highlight">
+                        <span class="highlight-text">Real-Time Chat</span>
+                        <span class="highlight-text">Alumni Groups</span>
+                        <span class="highlight-text">Professional Networking</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile-First Design</h3>
+                    <p>Responsive mobile application with native iOS and Android apps, ensuring seamless access to alumni networks and career opportunities on any device.</p>
+                    <div class="feature-highlight">
+                        <span class="highlight-text">Native Apps</span>
+                        <span class="highlight-text">Cross-Platform</span>
+                        <span class="highlight-text">Mobile Optimized</span>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Career Development</h3>
+                    <p>Comprehensive career support with job placement assistance, skill development programs, and professional certification tracking for continuous growth.</p>
+                    <div class="feature-highlight">
+                        <span class="highlight-text">Job Placement</span>
+                        <span class="highlight-text">Skill Development</span>
+                        <span class="highlight-text">Certifications</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro Video Section -->
+    <section class="intro-video">
+        <div class="container">
+            <div class="video-header">
+                <h2>See BAWNDZ in Action</h2>
+                <p>Discover how our platform transforms alumni networks and drives professional success</p>
+            </div>
+            <div class="video-container">
+                <div class="video-box">
+                    <div class="video-background">
+                        <div class="floating-shapes">
+                            <div class="shape shape-1"></div>
+                            <div class="shape shape-2"></div>
+                            <div class="shape shape-3"></div>
+                            <div class="shape shape-4"></div>
+                        </div>
+                        <div class="video-particles"></div>
+                        <div class="video-noise" aria-hidden="true"></div>
+                    </div>
+                    <div class="play-button">
+                        <div class="play-icon">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="play-ripple"></div>
+                        <div class="play-ripple delay-1"></div>
+                        <div class="play-ripple delay-2"></div>
+                    </div>
+                    <div class="video-overlay">
+                        <h3>Watch how BAWNDZ transforms alumni networks</h3>
+                        <p>See the power of professional alumni networking in action</p>
+                       
+                    </div>
+                    <div class="video-features">
+                        <div class="feature-tag">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Smart Networking</span>
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Analytics</span>
+                        </div>
+                        <div class="feature-tag">
+                            <i class="fas fa-users"></i>
+                            <span>Community</span>
+                        </div>
+                    </div>
+                  
+                </div>
+            </div>
+            <div class="video-cta">
+                <button class="btn btn-outline btn-video">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Learn More About Our Platform</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Empowering Alumni Networks Through Innovation</h2>
+                    <p>BAWNDZ helps educational institutions and their alumni stay connected like never before. We create platforms where relationships turn into opportunities, support systems, and career growth paths. Our vision is to empower alumni communities with tools that inspire collaboration and unlock new possibilities.</p>
+                    <p>With advanced technology and user-friendly design, we make it simple for institutions to manage alumni networks. From sharing knowledge to building professional connections, our platform ensures networking is effortless, meaningful, and impactful for everyone involved.</p>
+                    <button class="btn btn-primary">Learn More</button>
+                </div>
+                <div class="about-visual">
+                    <div class="about-illustration">
+                        <div class="floating-element element-1"></div>
+                        <div class="floating-element element-2"></div>
+                        <div class="floating-element element-3"></div>
+                        <div class="central-orb">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Feature Banner -->
+    <section class="showcase">
+        <div class="container">
+            <div class="showcase-content">
+                <div class="showcase-text">
+                    <h2>Support, Share, Succeed — Alumni Helping Students Thrive.</h2>
+                    <p>Our platform helps alumni stay connected with their college and with each other. Alumni can chat, share their experiences, and guide current students through mentorship. They can also support students by providing career advice and helping them find placement opportunities in top companies — creating a strong, supportive community for everyone.</p>
+                    <button class="btn btn-primary">Explore Smart Features</button>
+                </div>
+                <div class="showcase-visual">
+                    <div class="network-graphic">
+                        <div class="node student-node">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="node alumni-node">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="node corporate-node">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="connection-line"></div>
+                        <div class="ai-pulse"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How BAWNDZ Works</h2>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-icon"> 
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Join Network</h3>
+                    <p>Alumni register and create comprehensive professional profiles</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Smart Matching</h3>
+                    <p>AI connects alumni with relevant opportunities and mentors</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Build Connections</h3>
+                    <p>Foster meaningful professional relationships and partnerships</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Accelerate Growth</h3>
+                    <p>Unlock career opportunities and drive professional success</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics">
+        <div class="container">
+            <h2 class="section-title">Our Global Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="stat-number" data-target="250">0</div>
+                    <div class="stat-label">Institutions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-target="50000">0</div>
+                    <div class="stat-label">Alumni Connected</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="stat-number" data-target="1000">0</div>
+                    <div class="stat-label">Corporate Partners</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="stat-number" data-target="15000">0</div>
+                    <div class="stat-label">Career Connections</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I join the BAWNDZ network?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Simply register with your institutional email, complete your professional profile, and start connecting with alumni. Our guided onboarding process will help you maximize your networking potential.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is my personal and professional data secure?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! We use enterprise-grade security with end-to-end encryption, GDPR compliance, and advanced privacy controls to protect all alumni and institutional data.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How does the smart matching system work?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our AI analyzes your professional background, career goals, and interests to match you with relevant alumni mentors, career opportunities, and networking events. The system continuously learns to provide better matches.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <!--<section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Alumni Community Says</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Alumni">
+                    </div>
+                    <p class="testimonial-text">"BAWNDZ has transformed how I network professionally. The smart matching system connected me with industry leaders I never would have met otherwise."</p>
+                    <h4 class="testimonial-name">Alex Johnson</h4>
+                    <span class="testimonial-role">Senior Software Engineer, Google</span>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" alt="Alumni">
+                    </div>
+                    <p class="testimonial-text">"As an institution administrator, BAWNDZ has revolutionized our alumni engagement. The analytics and networking features are game-changing."</p>
+                    <h4 class="testimonial-name">Dr. Sarah Chen</h4>
+                    <span class="testimonial-role">Alumni Relations Director, Stanford University</span>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Alumni">
+                    </div>
+                    <p class="testimonial-text">"The platform helped me transition from academia to industry seamlessly. The mentorship opportunities and career guidance were invaluable."</p>
+                    <h4 class="testimonial-name">Michael Rodriguez</h4>
+                    <span class="testimonial-role">Data Science Director, Microsoft</span>
+                </div>
+            </div>
+        </div>
+    </section>
+-->
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Alumni Network?</h2>
+                <p>Join hundreds of institutions and thousands of alumni who are already experiencing the power of professional networking and career development.</p>
+                <button class="btn btn-primary btn-large">Start Your Journey Today</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="BAWNDZ" class="footer-logo">
+                    <h3>BAWNDZ</h3>
+                    <p>Empowering alumni networks through professional connections and career development</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#alumni">For Alumni</a></li>
+                            <li><a href="#institutions">For Institutions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#help">Help Center</a></li>
+                            <li><a href="#docs">API Documentation</a></li>
+                            <li><a href="#support">Support</a></li>
+                            <li><a href="#privacy">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BAWNDZ. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- JavaScript for mobile menu -->
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navMenu = document.querySelector('.nav-menu');
+
+        menuIcon.addEventListener('click', () => {
+            menuIcon.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link (but not dropdown links)
+        document.querySelectorAll('.nav-link').forEach(n => {
+            // Check if this nav-link is inside a dropdown
+            const isDropdownLink = n.closest('.nav-dropdown');
+            
+            n.addEventListener('click', (e) => {
+                // Only close mobile menu if it's NOT a dropdown link
+                if (!isDropdownLink) {
+                    menuIcon.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }
+            });
+        });
+
+        // Mobile dropdown functionality
+        document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+            const dropdownLink = dropdown.querySelector('.nav-link');
+            const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+            
+            dropdownLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Close other dropdowns
+                document.querySelectorAll('.nav-dropdown').forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current dropdown
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.nav-dropdown')) {
+                document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }
+        });
+
+        // Close mobile menu when clicking on dropdown menu items
+        document.querySelectorAll('.dropdown-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuIcon.classList.remove('active');
+            navMenu.classList.remove('active');
+                
+                // Also close all dropdowns
+                document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            });
+        });
+
+        // FAQ Accordion functionality
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Animated counters
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumber = entry.target;
+                    const target = parseInt(statNumber.getAttribute('data-target'));
+                    const duration = 2000; // 2 seconds
+                    const increment = target / (duration / 16); // 60fps
+                    let current = 0;
+
+                    const updateCounter = () => {
+                        current += increment;
+                        if (current < target) {
+                            statNumber.textContent = Math.floor(current) + '+';
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            statNumber.textContent = target + '+';
+                        }
+                    };
+
+                    updateCounter();
+                    observer.unobserve(statNumber);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all stat numbers
+        document.querySelectorAll('.stat-number').forEach(stat => {
+            observer.observe(stat);
+        });
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Video play button functionality
+        const videoBox = document.querySelector('.video-box');
+        if (videoBox) {
+            videoBox.addEventListener('click', () => {
+                // Add your video functionality here
+                alert('Video player would open here!');
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - BAWNDZ Alumni Network</title>
+    <link rel="stylesheet" href="auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="auth-background">
+        <div class="auth-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+        </div>
+        <div class="auth-particles"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="auth-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                    <a href="index.html">
+                            <img src="logo.png" alt="BAWNDZ" class="logo-img">
+                    </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="login.html" class="nav-link">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Card Header -->
+            <div class="auth-header">
+                <div class="auth-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h1 class="auth-title">Join BAWNDZ</h1>
+                <p class="auth-subtitle">Create your account and start building your professional network</p>
+            </div>
+
+            <!-- Signup Form -->
+            <form class="auth-form" id="signupForm">
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="institute" class="form-label">
+                            <i class="fas fa-building"></i>
+                            Institution
+                        </label>
+                        <input type="text" id="institute" name="institute" class="form-input" placeholder="Enter institution name" required>
+                        <div class="input-border"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="institutecode" class="form-label">
+                            <i class="fas fa-id-card"></i>
+                            Institution ID
+                        </label>
+                        <input type="text" id="institutecode" name="institutecode" class="form-input" placeholder="Enter institution ID" required>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName" class="form-label">
+                            <i class="fas fa-user"></i>
+                            Admin Name
+                        </label>
+                        <input type="text" id="firstName" name="firstName" class="form-input" placeholder="Enter admin name" required>
+                        <div class="input-border"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone" class="form-label">
+                            <i class="fas fa-phone"></i>
+                            Admin Phone Number
+                        </label>
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g., +91 98765 43210" required>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="adminemailid" class="form-label">
+                        <i class="fas fa-envelope"></i>
+                        Admin Email Address
+                    </label>
+                    <input type="text" id="adminemailid" name="adminemailid" class="form-input" placeholder="Enter Admin Email" required>
+                    <div class="input-border"></div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">
+                        <i class="fas fa-envelope"></i>
+                        Institute Email Address
+                    </label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                    <div class="input-border"></div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password" class="form-label">
+                            <i class="fas fa-lock"></i>
+                            Set Password
+                        </label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="password" name="password" class="form-input" placeholder="Create a password" required>
+                            <button type="button" class="password-toggle" onclick="togglePassword()">
+                                <i class="fas fa-eye" id="passwordToggleIcon"></i>
+                            </button>
+                        </div>
+                        <div class="input-border"></div>
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-bar">
+                                <div class="strength-fill" id="strengthFill"></div>
+                            </div>
+                            <span class="strength-text" id="strengthText">Password strength</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword" class="form-label">
+                            <i class="fas fa-lock"></i>
+                            Confirm Password
+                        </label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-input" placeholder="Confirm your password" required>
+                            <button type="button" class="password-toggle" onclick="toggleConfirmPassword()">
+                                <i class="fas fa-eye" id="confirmPasswordToggleIcon"></i>
+                            </button>
+                        </div>
+                        <div class="input-border"></div>
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox-wrapper">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a></span>
+                    </label>
+                </div>
+                <button type="submit" class="auth-button">
+                    <span class="button-text">Create Account</span>
+                    <span class="button-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </button>
+            </form>
+
+            <!-- Social Signup -->
+          
+
+            <!-- Footer -->
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html" class="auth-link">Sign In</a></p>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Creating your account...</p>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div class="success-message" id="successMessage">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h3>Welcome to BAWNDZ!</h3>
+            <p>Your account has been created successfully. You can now start networking with alumni worldwide.</p>
+        </div>
+    </div>
+
+    <script>
+        // Password toggle functionality
+        function togglePassword() {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.getElementById('passwordToggleIcon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+
+        function toggleConfirmPassword() {
+            const passwordInput = document.getElementById('confirmPassword');
+            const toggleIcon = document.getElementById('confirmPasswordToggleIcon');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.classList.remove('fa-eye');
+                toggleIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.classList.remove('fa-eye-slash');
+                toggleIcon.classList.add('fa-eye');
+            }
+        }
+
+        // Password strength checker
+        document.getElementById('password').addEventListener('input', function() {
+            const password = this.value;
+            const strengthFill = document.getElementById('strengthFill');
+            const strengthText = document.getElementById('strengthText');
+            
+            let strength = 0;
+            let strengthLabel = 'Weak';
+            let strengthColor = '#ff4757';
+            
+            if (password.length >= 8) strength += 1;
+            if (/[a-z]/.test(password)) strength += 1;
+            if (/[A-Z]/.test(password)) strength += 1;
+            if (/[0-9]/.test(password)) strength += 1;
+            if (/[^A-Za-z0-9]/.test(password)) strength += 1;
+            
+            if (strength >= 4) {
+                strengthLabel = 'Strong';
+                strengthColor = '#2ed573';
+            } else if (strength >= 2) {
+                strengthLabel = 'Medium';
+                strengthColor = '#ffa502';
+            }
+            
+            strengthFill.style.width = (strength * 20) + '%';
+            strengthFill.style.backgroundColor = strengthColor;
+            strengthText.textContent = strengthLabel;
+            strengthText.style.color = strengthColor;
+        });
+
+        // Password confirmation validation
+        document.getElementById('confirmPassword').addEventListener('input', function() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = this.value;
+            
+            if (confirmPassword && password !== confirmPassword) {
+                this.style.borderColor = '#ff4757';
+                this.parentElement.querySelector('.input-border').style.backgroundColor = '#ff4757';
+            } else {
+                this.style.borderColor = '';
+                this.parentElement.querySelector('.input-border').style.backgroundColor = '';
+            }
+        });
+
+        // Form submission
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+            
+            // Show loading overlay
+            document.getElementById('loadingOverlay').style.display = 'flex';
+            
+            // Simulate API call
+            setTimeout(() => {
+                document.getElementById('loadingOverlay').style.display = 'none';
+                showSuccessMessage();
+            }, 3000);
+        });
+
+        // Show success message
+        function showSuccessMessage() {
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'flex';
+            
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+                // Redirect to login page
+                window.location.href = 'login.html';
+            }, 4000);
+        }
+
+        // Social signup handlers
+        const googleBtn = document.querySelector('.social-button.google');
+        const linkedinBtn = document.querySelector('.social-button.linkedin');
+        if (googleBtn) {
+            googleBtn.addEventListener('click', function() {
+                alert('Google signup would be implemented here');
+            });
+        }
+        if (linkedinBtn) {
+            linkedinBtn.addEventListener('click', function() {
+                alert('LinkedIn signup would be implemented here');
+            });
+        }
+
+        // Form validation
+        const inputs = document.querySelectorAll('.form-input, .form-select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            input.addEventListener('blur', function() {
+                if (this.value === '') {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+
+        // Animate shapes on load
+        window.addEventListener('load', function() {
+            const shapes = document.querySelectorAll('.shape');
+            shapes.forEach((shape, index) => {
+                setTimeout(() => {
+                    shape.style.opacity = '1';
+                    shape.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+</html>

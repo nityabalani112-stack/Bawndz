@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAWNDZ Alumni Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="brand">
+                <img src="logo.png" alt="BAWNDZ" class="brand-logo">
+            </div>
+            <nav class="side-nav">
+                <a href="dashboard.html" class="nav-item active"><i class="fa-solid fa-gauge"></i><span>Overview</span></a>
+                <a href="upload.html" class="nav-item"><i class="fa-solid fa-file-arrow-up"></i><span>Upload Alumni Data</span></a>
+                <a href="memories.html" class="nav-item"><i class="fa-solid fa-images"></i><span>Memories</span></a>
+                <a href="mentorship.html" class="nav-item"><i class="fa-solid fa-user-tie"></i><span>Mentorship Sessions</span></a>
+                <a href="directory.html" class="nav-item"><i class="fa-solid fa-address-book"></i><span>Alumni Directory</span></a>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <header class="topbar">
+                <h1 class="page-title">Alumni Dashboard</h1>
+                <div class="topbar-actions">
+                    <div class="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                </div>
+            </header>
+
+            <section class="section">
+                <div class="cards">
+                    <div class="card stat">
+                        <div class="stat-top">
+                            <span class="stat-label">Total Alumni</span>
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <div class="stat-value">12,540</div>
+                    </div>
+                    <div class="card stat">
+                        <div class="stat-top">
+                            <span class="stat-label">Active Mentors</span>
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                        <div class="stat-value">326</div>
+                    </div>
+                    <div class="card stat">
+                        <div class="stat-top">
+                            <span class="stat-label">Upcoming Sessions</span>
+                            <i class="fa-solid fa-calendar"></i>
+                        </div>
+                        <div class="stat-value">14</div>
+                    </div>
+                    <div class="card stat">
+                        <div class="stat-top">
+                            <span class="stat-label">New Memories</span>
+                            <i class="fa-solid fa-image"></i>
+                        </div>
+                        <div class="stat-value">58</div>
+                    </div>
+                </div>
+
+                <div class="grid two" style="margin-top: 14px;">
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <h3>Alumni Growth (Last 12 Months)</h3>
+                        </div>
+                        <div class="chart-container"><canvas id="alumniGrowth"></canvas></div>
+                    </div>
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <h3>Alumni by Profession</h3>
+                        </div>
+                        <div class="chart-container"><canvas id="alumniProfession" height="200"></canvas></div>
+                    </div>
+                </div>
+
+                <div class="grid two" style="margin-top: 14px;">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Recent Activity</h3>
+                        </div>
+                        <div class="list">
+                            <div class="list-item">
+                                <div class="list-main">
+                                    <h4>50 new alumni added</h4>
+                                    <span class="meta">Today, 10:30 AM</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="list-main">
+                                    <h4>Mentorship: Interview Prep scheduled</h4>
+                                    <span class="meta">Yesterday, 5:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="list-main">
+                                    <h4>Memory uploaded: Alumni Meet 2024</h4>
+                                    <span class="meta">2 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card quick-actions">
+                        <div class="card-header">
+                            <h3>Quick Actions</h3>
+                        </div>
+                        <div class="actions-row">
+                            <a class="btn" href="upload.html"><i class="fa-solid fa-file-arrow-up"></i><span>Upload Data</span></a>
+                            <a class="btn outline" href="mentorship.html"><i class="fa-solid fa-user-tie"></i><span>Create Session</span></a>
+                            <a class="btn outline" href="memories.html"><i class="fa-solid fa-image"></i><span>Add Memory</span></a>
+                            <a class="btn" href="directory.html"><i class="fa-solid fa-address-book"></i><span>View Directory</span></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Charts
+        const growthCtx = document.getElementById('alumniGrowth');
+        if (growthCtx) {
+            new Chart(growthCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                    datasets: [{
+                        label: 'Alumni',
+                        data: [8500, 8700, 8900, 9100, 9400, 9700, 10050, 10400, 10820, 11230, 11700, 12540],
+                        borderColor: '#1d4ed8',
+                        backgroundColor: 'rgba(29, 78, 216, 0.08)',
+                        fill: true,
+                        tension: 0.35,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    layout: { padding: { left: 8, right: 8, top: 8, bottom: 8 } },
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: { mode: 'index', intersect: false }
+                    },
+                    scales: {
+                        y: { grid: { color: '#eef2ff' } },
+                        x: { grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        const profCtx = document.getElementById('alumniProfession');
+        if (profCtx) {
+            new Chart(profCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Engineering', 'Management', 'Academia', 'Design', 'Others'],
+                    datasets: [{
+                        data: [42, 24, 12, 10, 12],
+                        backgroundColor: ['#1d4ed8', '#3b82f6', '#60a5fa', '#93c5fd', '#c7d2fe'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, usePointStyle: true } } },
+                    cutout: '62%',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    layout: { padding: { left: 8, right: 8, top: 8, bottom: 8 } },
+                    radius: '85%',
+                    animation: { animateScale: true, animateRotate: true }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
+
